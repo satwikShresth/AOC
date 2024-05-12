@@ -46,5 +46,7 @@ func main() {
 	fmt.Println("Advent of code 2023:-")
 	fmt.Println("---------------------")
   fmt.Println("Day 1:")
+	fmt.Println("-------")
   day_1.Solution(*inputDir,filename)
+	fmt.Println("---------------------")
 }
