@@ -1,4 +1,4 @@
-package day_1
+package days
 
 import (
 	"bufio"
@@ -37,7 +37,9 @@ func (l *lineValue) getfinalValue() int {
 	return (l.firstValue * 10) + l.lastValue
 }
 
-func Solution(dir string, filename string) {
+type Day_1 struct{}
+
+func (d Day_1) Solution(dir string, filename string) {
 	filename = filepath.Join(dir, "day_1", filename)
 	file, err := os.Open(filename)
 
@@ -48,13 +50,13 @@ func Solution(dir string, filename string) {
 
 	defer file.Close()
 
-	question_1(bufio.NewScanner(file))
+	d.question_1(bufio.NewScanner(file))
 	file.Seek(0, 0)
-	question_2(bufio.NewScanner(file))
-  return
+	d.question_2(bufio.NewScanner(file))
+	return
 }
 
-func question_1(scanner *bufio.Scanner) {
+func (d Day_1) question_1(scanner *bufio.Scanner) {
 
 	if err := scanner.Err(); err != nil {
 		log.Println("Error reading from file:", err)
@@ -84,10 +86,10 @@ func question_1(scanner *bufio.Scanner) {
 	fmt.Println("Puzzle 1")
 	fmt.Println("Solution: ", total)
 	fmt.Println("---------")
-  return
+	return
 }
 
-func question_2(scanner *bufio.Scanner) {
+func (d Day_1) question_2(scanner *bufio.Scanner) {
 
 	if err := scanner.Err(); err != nil {
 		log.Println("Error reading from file:", err)
@@ -156,5 +158,5 @@ func question_2(scanner *bufio.Scanner) {
 
 	fmt.Println("Puzzle 2")
 	fmt.Println("Solution: ", total)
-  return
+	return
 }

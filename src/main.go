@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/satwikShresth/AOC/src/day_1"
+	"github.com/satwikShresth/AOC/src/days"
 )
 
 func main() {
@@ -43,10 +43,19 @@ func main() {
 
 	log.Println("Using input directory: ", *inputDir)
 
+
 	fmt.Println("Advent of code 2023:-")
 	fmt.Println("---------------------")
-  fmt.Println("Day 1:")
+ //  fmt.Println("Day 1:")
+	// fmt.Println("-------")
+ //  days.Day_1{}.Solution(*inputDir,filename)
+	// fmt.Println("---------------------")
+ //  fmt.Println("Day 2:")
+	// fmt.Println("-------")
+ //  days.Day_2{}.Solution(*inputDir,filename)
+	// fmt.Println("---------------------")
+  fmt.Println("Day 3:")
 	fmt.Println("-------")
-  day_1.Solution(*inputDir,filename)
+  days.Day_3{}.Solution(*inputDir,filename)
 	fmt.Println("---------------------")
 }
